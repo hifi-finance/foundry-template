@@ -1,6 +1,6 @@
 [etherscan]
-mainnet = { key = "${ETHERSCAN_API_KEY}" }
 goerli = { key = "${ETHERSCAN_API_KEY}" }
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
 
 [fmt]
 bracket_spacing = true
@@ -36,6 +36,7 @@ ffi = false                   # Disable the ffi cheatcode
 fuzz = { runs = 1_000 }       # The amount of fuzz runs to perform for each fuzz test case
 
 [profile.ci]
+optimizer = false
 fuzz = { runs = 10_000 }
 verbosity = 4
 ignored_error_codes = ["license", "code-size"]

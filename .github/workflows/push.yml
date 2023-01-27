@@ -1,0 +1,25 @@
+name: "Push"
+
+# The workflow will run each time a new commit is pushed
+on:
+  push
+
+jobs:
+  commit-lint:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Check out the repo"
+        uses: "actions/checkout@v3"
+
+      - name: "Install Node.js"
+        uses: "actions/setup-node@v3"
+        with:
+          node-version: "lts/*"
+
+      - name: "Install and setup commitlint"
+        run: |
+          npm install --save-dev @commitlint/config-conventional @commitlint/cli
+          echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
+
+      - name: "Lint the latest commit message"
+        run: echo "${{ github.event.head_commit.message }}" | npx --no commitlint

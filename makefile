@@ -1,12 +1,16 @@
 install::
 	@git submodule update --init --recursive
-build::
+build:: install
 	@forge build
-clean::
+
+clean:: install
 	@forge clean
-fmt::
+
+fmt:: install
 	@forge fmt
-test::
+
+test:: install
 	@forge test
-update::
+
+update:: install
 	@forge update
