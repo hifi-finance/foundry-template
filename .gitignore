@@ -1,6 +1,6 @@
 # Compiler files
+artifacts/
 cache/
-out/
 
 # Ignores development broadcast logs
 !/broadcast
@@ -9,3 +9,6 @@ out/
 
 # Dotenv file
 .env
+
+# MacOS files
+.DS_Store

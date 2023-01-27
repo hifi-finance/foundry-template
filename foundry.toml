@@ -1,8 +1,48 @@
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+goerli = { key = "${ETHERSCAN_API_KEY}" }
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "all"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+wrap_comments = true
+
 [profile.default]
-src = 'src'
-test = 'tests'
-script = 'script'
-out = 'out'
-libs = ['lib']
+contracts = "contracts"       # The source directory
+test = "test"                 # The test directory
+script = "script"             # The script directory
+broadcast = "broadcast"       # The broadcast transaction logs directory
+cache_path = "cache"          # The block data cache directory
+out = "artifacts"             # The compilation output directory
+libs = ["modules"]            # A list of library directories
+cache = true                  # Enable caching block data
+solc_version = "0.8.17"       # Override for the solc version (ignores `auto_detect_solc`)
+optimizer = true              # Enable the solc optimizer
+bytecode_hash = "none"        # Do not include the metadata hash
+optimizer_runs = 10_000       # The number of optimizer runs
+verbosity = 3                 # The verbosity of tests
+auto_detect_remappings = true # Automatically try to auto-detect remappings by scanning the library directories
+force = false                 # Running build does not discard the cache
+evm_version = "london"        # The EVM version to use during tests
+gas_reports = ["*"]           # The contracts to print gas reports for
+gas_reports_ignore = []       # The contracts to ignore printing gas reports for
+ignored_error_codes = []      # A list of compiler errors to ignore during build
+ffi = false                   # Disable the ffi cheatcode
+fuzz = { runs = 1_000 }       # The amount of fuzz runs to perform for each fuzz test case
+
+[profile.ci]
+fuzz = { runs = 10_000 }
+verbosity = 4
+ignored_error_codes = ["license", "code-size"]
+
+[rpc_endpoints]
+goerli = "https://goerli.infura.io/v3/${INFURA_API_KEY}"
+localhost = "http://localhost:8545"
+mainnet = "https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
