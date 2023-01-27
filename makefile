@@ -7,8 +7,17 @@ build:: install
 clean:: install
 	@forge clean
 
-fmt:: install
+coverage:: install
+	@forge coverage
+
+fmt-check:: install
+	@forge fmt --check
+
+fmt-write:: install
 	@forge fmt
+
+gas-report:: install
+	@forge test --gas-report
 
 test:: install
 	@forge test
