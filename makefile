@@ -1,5 +1,6 @@
 install::
 	@git submodule update --init --recursive
+
 build:: install
 	@forge build
 
