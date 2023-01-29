@@ -5,7 +5,7 @@ on:
   create
 
 jobs:
-  initial-commit:
+  initial-commit-msg:
     # We will only run this action when the repository isn't the template repository
     # Reference https://docs.github.com/en/actions/learn-github-actions/contexts
     # Reference https://docs.github.com/en/actions/learn-github-actions/expressions

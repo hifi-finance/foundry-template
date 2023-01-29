@@ -7,6 +7,8 @@ on:
 jobs:
   commit-lint:
     runs-on: "ubuntu-latest"
+    # We will not run this action on the first commit of the repository
+    if: ${{ github.event.before != '0000000000000000000000000000000000000000' }}
     steps:
       - name: "Check out the repo"
         uses: "actions/checkout@v3"
