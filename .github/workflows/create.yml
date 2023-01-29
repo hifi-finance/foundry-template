@@ -17,9 +17,10 @@ jobs:
         uses: "actions/checkout@v3"
 
       - name: "Update commit"
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: "stefanzweifel/git-auto-commit-action@v4"
         with:
           commit_message: "feat: initial commit"
-          commit_options: "--amend"
+          commit_options: "--amend --allow-empty"
           push_options: "--force"
+          skip_dirty_check: true
           skip_fetch: true
