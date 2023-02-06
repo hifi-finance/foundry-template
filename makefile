@@ -1,5 +1,5 @@
 install::
-	bash ./_/install.sh
+	@sh ./_/install.sh
 
 build::
 	@forge build

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 BIN_DIR="$(dirname -- "$(readlink -f -- "$0")")"
 
 git submodule update --init --recursive
