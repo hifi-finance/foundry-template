@@ -1,3 +1,6 @@
+# Include .env file if it exists and export its env vars
+-include .env
+
 install::
 	@sh ./_/install.sh
 
@@ -24,3 +27,6 @@ test::
 
 update::
 	@forge update
+
+watch::
+	@forge test --watch contracts/
