@@ -1,26 +1,26 @@
 install::
-	@git submodule update --init --recursive
+	bash ./_/install.sh
 
-build:: install
+build::
 	@forge build
 
-clean:: install
+clean::
 	@forge clean
 
-coverage:: install
+coverage::
 	@forge coverage
 
-fmt-check:: install
+fmt-check::
 	@forge fmt --check
 
-fmt-write:: install
+fmt-write::
 	@forge fmt
 
-gas-report:: install
+gas-report::
 	@forge test --gas-report
 
-test:: install
+test::
 	@forge test
 
-update:: install
+update::
 	@forge update
