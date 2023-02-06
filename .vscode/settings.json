@@ -6,6 +6,6 @@
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "solidity.formatter": "forge",
-  "solidity.packageDefaultDependenciesContractsDirectory": "src",
-  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "solidity.packageDefaultDependenciesContractsDirectory": "contracts",
+  "solidity.packageDefaultDependenciesDirectory": "modules",
 }
