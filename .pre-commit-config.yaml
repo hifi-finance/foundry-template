@@ -4,6 +4,7 @@ repos:
     hooks:
       - id: commitlint
         stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
   - repo: https://github.com/0xYYY/foundry-pre-commit
     rev: v1.0.0
     hooks:
