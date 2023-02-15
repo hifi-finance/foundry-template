@@ -1,8 +1,8 @@
 #!/bin/sh
 DIR="$(dirname -- "$(readlink -f -- "$0")")"
 
-trap 'rm -rf "$DIR/tmp/"' 0
-trap 'exit $?' 1 2 3 15
+trap "rm -rf $DIR/tmp/" 0
+trap "exit $?" 1 2 3 15
 
 git submodule update --init --recursive
 
@@ -11,5 +11,4 @@ curl -Lso $DIR/tmp/pre-commit https://github.com/pre-commit/pre-commit/releases/
 chmod +x $DIR/tmp/pre-commit
 
 $DIR/tmp/pre-commit install
-
 $DIR/tmp/pre-commit install --hook-type commit-msg

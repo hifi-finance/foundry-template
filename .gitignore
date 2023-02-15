@@ -12,3 +12,6 @@ cache/
 
 # MacOS files
 .DS_Store
+
+# Temporary files
+**/tmp/
