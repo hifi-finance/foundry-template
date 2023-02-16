@@ -46,7 +46,6 @@ This template comes with sensible default configurations in the following files:
 
 ```text
 ├── .commitlintrc.yaml
-├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
 ├── .gitmodules
