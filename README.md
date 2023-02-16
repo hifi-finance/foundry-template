@@ -9,7 +9,7 @@
 
 ## Overview
 
-A Foundry template for Solidity smart contract development.
+A super light Foundry template for Solidity smart contract development.
 
 ## What's Inside
 
