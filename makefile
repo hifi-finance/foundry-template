@@ -1,9 +1,14 @@
-# Include .env file if it exists and export its env vars
+# Include .env file if it exists and export its env vars.
 -include .env
 
-install::
-	@sh ./_/install.sh
+# Prepare the local development environment.
+setup::
+	@sh ./_/setup.sh
 
+# Run Foundry scripts.
+#
+# Prerequisites:
+# - [Foundry](https://getfoundry.sh)
 build::
 	@forge build
 
