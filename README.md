@@ -7,6 +7,8 @@
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
+## Overview
+
 A Foundry template for Solidity smart contract development.
 
 ## What's Inside
@@ -28,7 +30,7 @@ cd my-project
 make
 ```
 
-You need to have [Foundry](https://github.com/foundry-rs/foundry#installation) installed on your local machine to be able to run any of the Foundry scripts in [makefile](https://github.com/hifi-finance/foundry-template/blob/main/makefile).
+This project was built using [Foundry](https://book.getfoundry.sh/). Refer to installation instructions [here](https://github.com/foundry-rs/foundry#installation).
 
 ## Features
 
@@ -43,10 +45,12 @@ interested in reading the [Writing Tests](https://book.getfoundry.sh/forge/writi
 This template comes with sensible default configurations in the following files:
 
 ```text
+├── .commitlintrc.yaml
 ├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
 ├── .gitmodules
+├── .pre-commit-config.yaml
 ├── foundry.toml
 ├── makefile
 └── remappings.txt
@@ -83,76 +87,37 @@ the terminal output by adding the `-vvvv` flag.
 
 This template comes with an example test contract [Foo.t.sol](./test/Foo.t.sol).
 
-## Usage
+## Commands
 
-Here's a list of the most frequently needed commands.
+To make it easier to perform some tasks within the repo, a few commands are available through a [makefile](https://github.com/hifi-finance/foundry-template/blob/main/makefile):
 
-### Build
+### Build Commands
 
-Build the contracts:
+| Command          | Action                                                   |
+| ---------------- | -------------------------------------------------------- |
+| `make build`     | Compile all contracts in the repo, including submodules. |
+| `make clean`     | Delete the build artifacts and cache directories.        |
+| `make fmt-check` | Lint the contracts.                                      |
+| `make fmt-write` | Format the contracts.                                    |
 
-```sh
-$ make build
-```
+### Test Commands
 
-### Clean
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `make coverage`   | Get a test coverage report.       |
+| `make test`       | Run all tests located in `test/`. |
+| `make gas-report` | Get a gas report.                 |
 
-Delete the build artifacts and cache directories:
+Specific tests can be run using `forge test` conventions, specified in more detail in the Foundry [Book](https://book.getfoundry.sh/reference/forge/forge-test#test-options).
 
-```sh
-$ make clean
-```
+### Deploy Commands
 
-### Coverage
-
-Get a test coverage report:
-
-```sh
-$ make coverage
-```
-
-### Deploy
-
-Deploy to Anvil:
-
-```sh
-$ forge script script/Foo.s.sol --broadcast --fork-url http://localhost:8545
-```
+| Command       | Description      |
+| ------------- | ---------------- |
+| `make deploy` | Deploy to Anvil. |
 
 For instructions on how to deploy to a testnet or mainnet, check out the
 [Solidity Scripting tutorial](https://book.getfoundry.sh/tutorials/solidity-scripting.html).
-
-### Format
-
-Format the contracts:
-
-```sh
-$ make fmt-write
-```
-
-### Gas Usage
-
-Get a gas report:
-
-```sh
-$ make gas-report
-```
-
-### Lint
-
-Lint the contracts:
-
-```sh
-$ make fmt-check
-```
-
-### Test
-
-Run the tests:
-
-```sh
-$ make test
-```
 
 ## Notes
 
