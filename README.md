@@ -25,9 +25,10 @@ Or, if you prefer to install the template manually:
 ```sh
 forge init my-project --template https://github.com/hifi-finance/foundry-template
 cd my-project
+make
 ```
 
-You need to have [Foundry](https://github.com/foundry-rs/foundry#installation) installed on your local machine to be able to run any of the [makefile](https://github.com/hifi-finance/foundry-template/blob/main/makefile) targets that include the following commands: `forge`, `cast`, `anvil`.
+You need to have [Foundry](https://github.com/foundry-rs/foundry#installation) installed on your local machine to be able to run any of the Foundry scripts in [makefile](https://github.com/hifi-finance/foundry-template/blob/main/makefile).
 
 ## Features
 
