@@ -12,5 +12,6 @@ repos:
         name: "lint"
         description: "Lint the Solidity code"
         language: "system"
-        entry: "make fmt-check"
+        stages: ["commit"]
+        entry: "sh _/pre-commit/lint.sh"
         pass_filenames: false
