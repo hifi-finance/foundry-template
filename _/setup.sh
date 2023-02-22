@@ -5,6 +5,7 @@ DIR="$(dirname -- "$(readlink -f -- "$0")")"
 trap "rm -rf $DIR/tmp/" 0
 trap "exit $?" 1 2 3 15
 
+# Update submodules.
 git submodule update --init --recursive
 
 # Install pre-commit hooks.
