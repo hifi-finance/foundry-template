@@ -13,5 +13,5 @@ repos:
         description: "Lint the Solidity code"
         language: "system"
         stages: ["commit"]
-        entry: "sh _/env_run.sh 'make fmt-check'"
+        entry: "sh .shell/env_run.sh 'make fmt-check'"
         pass_filenames: false

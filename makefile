@@ -3,7 +3,7 @@
 
 # Prepare the local development environment.
 setup::
-	@sh ./_/setup.sh
+	@sh .shell/setup.sh
 
 # Run Foundry scripts.
 #
