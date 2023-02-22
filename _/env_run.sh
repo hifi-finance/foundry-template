@@ -14,6 +14,7 @@ if [ "$(uname)" = "Linux" ]; then
 fi
 
 # Run the given command.
+echo "running '$@'"
 eval "$@"
 exitCode="$?"
 
