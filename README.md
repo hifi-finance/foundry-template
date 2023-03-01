@@ -1,11 +1,13 @@
-# Foundry Template [![Github Actions][gha-badge]][gha] [![Foundry][foundry-badge]][foundry] [![License: MIT][license-badge]][license]
+# Foundry Template [![Github Actions][gha-badge]][gha] [![Foundry][foundry-badge]][foundry] [![pre-commit][pre-commit-badge]][pre-commit] [![License: MIT][license-badge]][license]
 
 [gha]: https://github.com/hifi-finance/foundry-template/actions
-[gha-badge]: https://github.com/hifi-finance/foundry-template/actions/workflows/main.yml/badge.svg
+[gha-badge]: https://github.com/hifi-finance/foundry-template/actions/workflows/ci.yml/badge.svg
 [foundry]: https://getfoundry.sh/
 [foundry-badge]: https://img.shields.io/badge/Built%20with-Foundry-FFDB1C.svg
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
+[pre-commit]: https://pre-commit.com
+[pre-commit-badge]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit
 
 ## Overview
 
@@ -68,7 +70,7 @@ For guidance on how to integrate a Foundry project in VSCode, please refer to th
 This template comes with GitHub Actions pre-configured. Your contracts will be linted and tested on every push and pull
 request made to the `main` branch.
 
-You can edit the CI script in [.github/workflows/main.yml](./.github/workflows/main.yml).
+You can edit the CI script in [.github/workflows/ci.yml](./.github/workflows/ci.yml).
 
 ### Conventional Commits
 
