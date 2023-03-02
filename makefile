@@ -1,6 +1,9 @@
 # Include .env file if it exists and export its env vars.
 -include .env
 
+# Set the default goal to setup.
+.DEFAULT_GOAL := setup
+
 # Prepare the local development environment.
 setup::
 	@sh .shell/setup.sh
