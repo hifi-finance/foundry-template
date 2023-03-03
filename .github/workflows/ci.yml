@@ -66,6 +66,9 @@ jobs:
 
   slither-analyze:
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: "read"
+      security-events: "write"
     steps:
       - name: "Check out the repo"
         uses: "actions/checkout@v3"
