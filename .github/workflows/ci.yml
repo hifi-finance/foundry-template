@@ -81,7 +81,7 @@ jobs:
         with:
           fail-on: "none"
           sarif: "results.sarif"
-          slither-args: "--filter-paths './modules|./test' --exclude naming-convention"
+          slither-args: "--exclude naming-convention"
           target: "contracts/"
 
       - name: "Upload SARIF file"
