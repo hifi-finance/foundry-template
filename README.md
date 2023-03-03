@@ -131,6 +131,7 @@ For instructions on how to deploy to a testnet or mainnet, check out the
 ## Related Efforts
 
 - [PaulRBerg/foundry-template](https://github.com/PaulRBerg/foundry-template)
+- [ScopeLift/foundry-template](https://github.com/ScopeLift/foundry-template)
 - [abigger87/femplate](https://github.com/abigger87/femplate)
 - [cleanunicorn/ethereum-smartcontract-template](https://github.com/cleanunicorn/ethereum-smartcontract-template)
 - [foundry-rs/forge-template](https://github.com/foundry-rs/forge-template)
