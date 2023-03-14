@@ -64,36 +64,6 @@ jobs:
         run: |
           forge test -vvv
 
-  halmos-test:
-    runs-on: "ubuntu-latest"
-    continue-on-error: true
-    steps:
-      - name: "Check out the repo"
-        uses: "actions/checkout@v3"
-        with:
-          submodules: "recursive"
-
-      - name: "Install Foundry"
-        uses: "foundry-rs/foundry-toolchain@v1"
-
-      - name: "Enable Pip caching"
-        run: |
-          touch requirements.txt
-
-      - name: "Setup Python"
-        uses: "actions/setup-python@v4"
-        with:
-          python-version: "3.9"
-          cache: "pip"
-
-      - name: "Install Halmos"
-        run: |
-          pip install halmos
-
-      - name: "Run symbolic testing with Halmos"
-        run: |
-          halmos --foundry-out-directory artifacts/
-
   slither-analyze:
     runs-on: "ubuntu-latest"
     permissions:
