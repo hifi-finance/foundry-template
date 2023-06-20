@@ -14,8 +14,8 @@ wrap_comments = true
 
 [profile.default]
 contracts = "contracts"       # The source directory
-test = "test"                 # The test directory
-script = "script"             # The script directory
+test = "tests"                # The tests directory
+script = "scripts"            # The scripts directory
 broadcast = "broadcast"       # The broadcast transaction logs directory
 cache_path = "cache"          # The block data cache directory
 out = "artifacts"             # The compilation output directory

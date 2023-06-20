@@ -22,7 +22,7 @@ coverage::
 	@forge coverage
 
 deploy::
-	@forge script script/Foo.s.sol --broadcast --fork-url http://localhost:8545
+	@forge script scripts/Foo.s.sol --broadcast --fork-url http://localhost:8545
 
 fmt-check::
 	@forge fmt --check

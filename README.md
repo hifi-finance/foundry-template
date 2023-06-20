@@ -86,7 +86,7 @@ environment accessible via the `vm` property. You can also use
 [console.log](https://book.getfoundry.sh/faq?highlight=console.log#how-do-i-use-consolelog), whose logs you can see in
 the terminal output by adding the `-vvvv` flag.
 
-This template comes with an example test contract [Foo.t.sol](./test/Foo.t.sol).
+This template comes with an example test contract [Foo.t.sol](./tests/Foo.t.sol).
 
 ## Commands
 
@@ -106,7 +106,7 @@ To make it easier to perform some tasks within the repo, a few commands are avai
 | Command           | Description                       |
 | ----------------- | --------------------------------- |
 | `make coverage`   | Get a test coverage report.       |
-| `make test`       | Run all tests located in `test/`. |
+| `make test`       | Run all tests located in `tests/`. |
 | `make gas-report` | Get a gas report.                 |
 
 Specific tests can be run using `forge test` conventions, specified in more detail in the Foundry [Book](https://book.getfoundry.sh/reference/forge/forge-test#test-options).
