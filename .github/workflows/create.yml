@@ -16,6 +16,10 @@ jobs:
       - name: "Check out the repo"
         uses: "actions/checkout@v3"
 
+      - name: "Remove superfluous files"
+        run: |
+          rm -f "./.github/workflows/create.yml"
+
       - name: "Update commit"
         uses: "stefanzweifel/git-auto-commit-action@v4"
         with:
